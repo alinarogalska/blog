@@ -13,7 +13,7 @@ $conf= json_decode($json, true);
 
 if($_POST['login'] && $_POST['pass']) {
 
-    $sql = "SELECT id, password, salt FROM users WHERE login = '".$_POST['login']."' ";
+    $sql = "SELECT id, login, password, salt FROM users WHERE login = '".$_POST['login']."' ";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -27,6 +27,7 @@ if($_POST['login'] && $_POST['pass']) {
             // password correct
 
             $_SESSION['user_id'] = $row['id'];
+            $_SESSION['user_login'] = $row['login'];
             header("Location: ".$conf['BASE_URL']."/userpage.php");
         } else {
             echo "password incorrect";
@@ -34,6 +35,7 @@ if($_POST['login'] && $_POST['pass']) {
     } else {
         echo "0 results";
     }
+    $conn->close();
 
 
 } else {

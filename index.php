@@ -9,6 +9,7 @@ $conf= json_decode($json, true);
     <meta charset="utf-8">
     <link href="main.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <title><?php echo $conf['title'] ?></title>
 </head>
 <body>
