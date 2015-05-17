@@ -1,0 +1,224 @@
+body{
+    background:whitesmoke;
+    font-family:'Times New Roman', serif;
+    width: 1035px;
+    margin: 0 auto;
+    height: auto;
+}
+li{
+    list-style: none;
+}
+.nav .header{
+    background-image: url('images/background.png');
+    height: 150px;
+}
+
+.header a.brand{
+    font-size: 5em;
+    font-family: 'Shift', serif;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: black;
+    float:left;
+}
+.navigation li{
+
+    display: inline;
+    text-align: right;
+    float: right;
+    padding-right: 30px;
+    margin-top: 15px;
+}
+.navigation a{
+    color: black;
+    text-decoration: none;
+}
+.navigation a:hover{
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.block-search{
+    width: 345px;
+    height: auto;
+    margin-left: 740px;
+    position: relative;
+    margin-top: 50px;
+}
+.block-search input.input-search{
+    width: 230px;
+    height: 26px;
+    border: 1px solid #cccccc;
+    font: 14px sans-serif;
+}
+.button-search{
+    cursor: pointer;
+}
+
+.block-news{
+    width: 250px;
+    height: auto;
+    float: right;
+    margin-top: 100px;
+    font: 12px sans-serif;
+}
+
+.block-news .newsticker{
+    width: 250px;
+    border-top: 1px solid #DDDDDD;
+}
+
+.block-news .newsticker p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.block-news .newsticker li{
+    border-bottom: 1px solid #DDDDDD;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.block-news .newsticker a{
+    color:cornflowerblue;
+    padding-left: 10px;
+}
+
+.block-news .newsticker span{
+    color: gray;
+    font-style: italic;
+}
+
+
+.block-content-reg {
+    width: 70%;
+    height: 500px;
+    background: lightsteelblue;
+    border-radius: 20px;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.title_reg{
+    font: 50px sans-serif;
+    font-weight: bold;
+    padding: 90px 0px 0px 200px;
+}
+.form-registration li{
+    margin-top: 10px;
+}
+.form-registration>li>input{
+    height: 30px;
+    width: 400px;
+    font: 16px sans-serif;
+    margin-left: 100px;
+    padding-left: 5px;
+    color:black;
+    border-left:1px solid #ABABAB;
+    border-top:1px solid #ABABAB;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+.form-registration>li>input:focus{
+    border: 1px solid aliceblue;
+}
+.form-registration>li>label{
+    position: absolute;
+    font: 15px sans-serif;
+    margin-top: 7px;
+}
+.block-content-reg .reg-submit{
+    margin-left: 465px;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 25px;
+    width: 80px;
+    border-radius: 3px;
+}
+
+
+.block-content-login{
+    width:38%;
+    height: 315px;
+    background: lightsteelblue;
+    margin-left: 30%;
+    margin-top: 5%;
+    border-radius: 20px;
+}
+.title_login{
+    font: 35px sans-serif;
+    font-weight: bold;
+    padding:35px 10px 0px 20px;
+}
+.form-login li{
+    margin-top: 10px;
+}
+.form-login>li>input{
+    height: 30px;
+    width: 300px;
+    font: 16px sans-serif;
+    margin-left: 0px;
+    padding-left: 5px;
+    color:black;
+    border-left:1px solid #ABABAB;
+    border-top:1px solid #ABABAB;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+.form-login>li>input:focus{
+    border: 1px solid aliceblue;
+}
+.block-content-login .login-submit{
+    margin-left: 270px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    height: 25px;
+    width: 80px;
+    border-radius: 3px;
+}
+.list-login a{
+    text-decoration: none;
+    color:blue;
+}
+.list-login a:hover{
+    border-bottom: 1px solid blue;
+    cursor:pointer;
+}
+.block-content-login .login_message{
+    font: bold 13px sans-serif;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: red;
+    display: none;
+}
+.list-login li{
+    margin-top: 5px;
+    font: 14px sans-serif;
+}
+
+.content{
+    width: 70%;
+    height: auto;
+    background: white;
+    border-radius: 20px;
+    margin-left: 15%;
+    margin-top: 1%;
+}
+.userpage a{
+    text-decoration: none;
+    color:black;
+    font: 40px sans-serif;
+    margin-left: 15%;
+}
+.userpage .content p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.userpage .content li{
+    border-bottom: 1px solid #DDDDDD;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
