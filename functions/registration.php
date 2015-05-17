@@ -15,22 +15,35 @@ $conf= json_decode($json, true);
 
 
 if($_POST['reg_login'] && $_POST['reg_pass'] && $_POST['reg_firstname'] && $_POST['reg_lastname'] &&  $_POST['reg_email']) {
-    // do bazy
 
-    $password = $_POST['reg_pass'];
-    $password = md5($password);
-    $salt = generateRandomString(32);
-    $hash = md5($password . $salt);
+    $sql = "SELECT * FROM users WHERE login = '".$_POST['reg_login']."' ";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        echo "jest";
+        die;
+    }
+
+        // do bazy
+
+        $password = $_POST['reg_pass'];
+        $password = md5($password);
+        $salt = generateRandomString(32);
+        $hash = md5($password . $salt);
 
 
-    $sql = "INSERT INTO users (login, email, first_name, last_name, password, salt, date_reg)
+        $sql = "INSERT INTO users (login, email, first_name, last_name, password, salt, date_reg)
     VALUES ('".$_POST['reg_login']."', '".$_POST['reg_email']."', '".$_POST['reg_firstname']."', '".$_POST['reg_lastname']."', '".$hash."', '".$salt."', NOW())";
 
-    if ($conn->query($sql) === TRUE) {
-        header("Location: ".$conf['BASE_URL']."/login.php");
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+        if ($conn->query($sql) === TRUE) {
+            header("Location: ".$conf['BASE_URL']."/login.php");
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+
+
+
+
 
 } else {
     echo "Brak danych. Uzupełnij wszystkie pola!";
