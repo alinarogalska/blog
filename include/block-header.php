@@ -12,7 +12,9 @@
         <?php
             } else {
          ?>
+
             <li><a href="logout.php">Logout</a></li>
+            <li><a href="userpage.php">My Profile</a></li>
          <?php } ?>
         </ul>
     </div>
